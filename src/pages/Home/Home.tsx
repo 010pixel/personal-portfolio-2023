@@ -142,7 +142,8 @@ const Home: ReactFCC<HomeProps> = () => {
 						display: 'flex',
 						flexDirection: {
 							xs: 'column',
-							sm: 'row',
+							sm: 'column',
+							md: 'row',
 						},
 						gap: 10,
 						justifyContent: 'center',
@@ -172,6 +173,22 @@ const Home: ReactFCC<HomeProps> = () => {
 						</Typography>
 						<Typography variant="h5" component="div" sx={{ color: '#333' }} fontWeight={300}>
 							Projects
+						</Typography>
+					</Box>
+					<Box>
+						<Typography variant="h2" component="h3" textAlign="center" fontWeight={400}>
+							<CountUp end={9} enableScrollSpy scrollSpyDelay={500} scrollSpyOnce />
+						</Typography>
+						<Typography variant="h5" component="div" sx={{ color: '#333' }} fontWeight={300}>
+							Browser Extensions
+						</Typography>
+					</Box>
+					<Box>
+						<Typography variant="h2" component="h3" textAlign="center" fontWeight={400}>
+							<CountUp end={3} enableScrollSpy scrollSpyDelay={500} scrollSpyOnce />
+						</Typography>
+						<Typography variant="h5" component="div" sx={{ color: '#333' }} fontWeight={300}>
+							WordPress Plugins
 						</Typography>
 					</Box>
 				</Paper>
