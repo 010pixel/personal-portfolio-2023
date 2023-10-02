@@ -33,6 +33,19 @@ const Stats: ReactFCC<StatsProps> = () => {
 			postfix: 'M+',
 		},
 	];
+
+	const photos = [
+		'photo-1628126235206-5260b9ea6441',
+		'photo-1590907047706-ee9c08cf3189',
+		// 'photo-1419242902214-272b3f66ee7a',
+		'photo-1528722828814-77b9b83aafb2',
+		// 'photo-1446776811953-b23d57bd21aa',
+		// 'photo-1608178398319-48f814d0750c',
+		// 'photo-1610296669228-602fa827fc1f',
+	];
+
+	const randomPhoto = photos[Math.floor(Math.random() * photos.length)];
+
 	return (
 		<Paper
 			sx={{
@@ -43,12 +56,15 @@ const Stats: ReactFCC<StatsProps> = () => {
 				},
 				backgroundColor: '#fff',
 				borderRadius: 5,
-				backgroundImage:
-					'url(https://images.unsplash.com/photo-1683009427666-340595e57e43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=900&q=80)',
+				backgroundImage: `url(https://images.unsplash.com/${randomPhoto}?auto=format&fit=crop&w=1800&q=80)`,
 				backgroundSize: 'cover',
-				backgroundPosition: 'center bottom',
+				backgroundPosition: 'center',
 				backgroundRepeat: 'no-repeat',
-				backgroundAttachment: 'fixed',
+				backgroundAttachment: {
+					xs: 'scroll',
+					sm: 'fixed',
+					md: 'fixed',
+				},
 			}}
 			elevation={1}
 		>
