@@ -111,6 +111,7 @@ const Skills: ReactFCC<SkillsProps> = () => {
 								sm: '80px',
 								// md: '96px',
 							},
+							animation: 'fadeIn 1s ease-in-out',
 						}}
 					>
 						<Avatar
