@@ -25,7 +25,7 @@ const Home: ReactFCC<HomeProps> = () => {
 					justifyContent: 'center',
 					alignItems: 'stretch',
 					gap: {
-						xs: 3,
+						xs: 5,
 						sm: 8,
 						md: 10,
 					},
