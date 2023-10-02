@@ -14,7 +14,7 @@ const Header: ReactFCC<HeaderProps> = () => {
 	};
 
 	return (
-		<Container sx={{ p: 2 }}>
+		<Container sx={{ p: 2 }} maxWidth="xl">
 			<AppBar
 				position="sticky"
 				sx={{

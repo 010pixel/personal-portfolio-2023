@@ -17,6 +17,7 @@ const Home: ReactFCC<HomeProps> = () => {
 	return (
 		<div data-testid="home-component">
 			<Container
+				maxWidth="xl"
 				sx={{
 					display: 'flex',
 					flexDirection: 'column',
