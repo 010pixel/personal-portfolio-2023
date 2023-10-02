@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Paper, Typography } from '@mui/material';
+import { Box, Grid, Paper, Typography } from '@mui/material';
 import CountUp from 'react-countup';
 import { ReactFCC } from '../../interface/react';
 
@@ -10,34 +10,33 @@ const Stats: ReactFCC<StatsProps> = () => {
 		{
 			title: 'Years of experience',
 			value: 12,
+			postfix: '+',
 		},
 		{
 			title: 'Projects',
 			value: 100,
+			postfix: '+',
 		},
 		{
 			title: 'Browser Extensions',
 			value: 9,
+			postfix: '',
 		},
 		{
 			title: 'WordPress Plugins',
 			value: 3,
+			postfix: '',
+		},
+		{
+			title: 'Users',
+			value: 30,
+			postfix: 'M+',
 		},
 	];
 	return (
 		<Paper
 			sx={{
-				display: 'flex',
-				flexDirection: {
-					xs: 'column',
-					sm: 'column',
-					md: 'row',
-				},
-				gap: 10,
-				justifyContent: 'center',
-				textAlign: 'center',
-				// alignItems: 'center',
-				p: {
+				py: {
 					xs: 5,
 					sm: 10,
 					md: 15,
@@ -50,21 +49,49 @@ const Stats: ReactFCC<StatsProps> = () => {
 				backgroundPosition: 'center bottom',
 				backgroundRepeat: 'no-repeat',
 				backgroundAttachment: 'fixed',
-				color: '#fff',
-				textShadow: '0 0 10px rgba(0,0,0,0.5)',
 			}}
 			elevation={1}
 		>
-			{statistics.map((statistic) => (
-				<Box key={statistic.title}>
-					<Typography variant="h2" component="h3" textAlign="center" fontWeight={400}>
-						<CountUp end={statistic.value} enableScrollSpy scrollSpyDelay={500} scrollSpyOnce />+
-					</Typography>
-					<Typography variant="h5" component="div" sx={{ color: '#fff' }} fontWeight={300}>
-						{statistic.title}
-					</Typography>
-				</Box>
-			))}
+			<Grid
+				container
+				maxWidth="xl"
+				spacing={0}
+				sx={{
+					gap: 5,
+					justifyContent: 'center',
+					mx: 'auto',
+					textAlign: 'center',
+				}}
+			>
+				{statistics.map((statistic) => (
+					<Grid item xs={12} sm={4} md={3}>
+						<Box
+							key={statistic.title}
+							sx={{
+								backgroundColor: 'rgba(0,0,0,0.05)',
+								borderRadius: 5,
+								border: '1px solid rgba(255,255,255,0.1)',
+								height: '100%',
+								py: 4,
+								mx: 2,
+								textShadow: '0 0 10px rgba(0,0,0,0.5)',
+								color: '#fff',
+								justifyContent: 'center',
+								display: 'flex',
+								flexDirection: 'column',
+							}}
+						>
+							<Typography variant="h2" component="h3" fontWeight={400}>
+								<CountUp end={statistic.value} enableScrollSpy scrollSpyDelay={500} scrollSpyOnce />
+								{statistic.postfix}
+							</Typography>
+							<Typography variant="h5" component="div" fontWeight={300}>
+								{statistic.title}
+							</Typography>
+						</Box>
+					</Grid>
+				))}
+			</Grid>
 		</Paper>
 	);
 };
