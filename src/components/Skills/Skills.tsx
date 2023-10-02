@@ -50,14 +50,14 @@ const Skills: ReactFCC<SkillsProps> = () => {
 				borderRadius: 5,
 				// backgroundImage:
 				// 	'url(https://images.unsplash.com/photo-1526666923127-b2970f64b422?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=960&q=80)',
-				backgroundSize: 'cover',
-				backgroundPosition: 'center bottom',
-				backgroundRepeat: 'no-repeat',
-				backgroundAttachment: {
-					xs: 'scroll',
-					sm: 'fixed',
-					md: 'fixed',
-				},
+				// backgroundSize: 'cover',
+				// backgroundPosition: 'center bottom',
+				// backgroundRepeat: 'no-repeat',
+				// backgroundAttachment: {
+				// 	xs: 'scroll',
+				// 	sm: 'fixed',
+				// 	md: 'fixed',
+				// },
 			}}
 			elevation={1}
 			id="skills"
@@ -84,7 +84,7 @@ const Skills: ReactFCC<SkillsProps> = () => {
 				spacing={0}
 				sx={{
 					gap: {
-						xs: 1,
+						xs: 0,
 						sm: 2,
 						// md: 4,
 					},
@@ -107,7 +107,7 @@ const Skills: ReactFCC<SkillsProps> = () => {
 							flexDirection: 'column',
 							p: 1,
 							width: {
-								xs: '72px',
+								xs: '80px',
 								sm: '80px',
 								// md: '96px',
 							},
