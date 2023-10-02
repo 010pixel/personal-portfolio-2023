@@ -4,9 +4,9 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
-import CountUp from 'react-countup';
 import { ReactFCC } from '../../interface/react';
 import { trackPageView } from '../../common/ga4';
+import Stats from '../../components/Stats/Stats';
 
 interface HomeProps {}
 
@@ -137,61 +137,9 @@ const Home: ReactFCC<HomeProps> = () => {
 						</a>
 					</Box>
 				</Box>
-				<Paper
-					sx={{
-						display: 'flex',
-						flexDirection: {
-							xs: 'column',
-							sm: 'column',
-							md: 'row',
-						},
-						gap: 10,
-						justifyContent: 'center',
-						textAlign: 'center',
-						alignItems: 'center',
-						p: {
-							xs: 5,
-							sm: 10,
-							md: 15,
-						},
-						backgroundColor: '#fff',
-						borderRadius: 5,
-					}}
-					elevation={1}
-				>
-					<Box>
-						<Typography variant="h2" component="h3" textAlign="center" fontWeight={400}>
-							<CountUp end={12} enableScrollSpy scrollSpyDelay={500} scrollSpyOnce />+
-						</Typography>
-						<Typography variant="h5" component="div" sx={{ color: '#333' }} fontWeight={300}>
-							Years of experience
-						</Typography>
-					</Box>
-					<Box>
-						<Typography variant="h2" component="h3" textAlign="center" fontWeight={400}>
-							<CountUp end={100} enableScrollSpy scrollSpyDelay={500} scrollSpyOnce />+
-						</Typography>
-						<Typography variant="h5" component="div" sx={{ color: '#333' }} fontWeight={300}>
-							Projects
-						</Typography>
-					</Box>
-					<Box>
-						<Typography variant="h2" component="h3" textAlign="center" fontWeight={400}>
-							<CountUp end={9} enableScrollSpy scrollSpyDelay={500} scrollSpyOnce />
-						</Typography>
-						<Typography variant="h5" component="div" sx={{ color: '#333' }} fontWeight={300}>
-							Browser Extensions
-						</Typography>
-					</Box>
-					<Box>
-						<Typography variant="h2" component="h3" textAlign="center" fontWeight={400}>
-							<CountUp end={3} enableScrollSpy scrollSpyDelay={500} scrollSpyOnce />
-						</Typography>
-						<Typography variant="h5" component="div" sx={{ color: '#333' }} fontWeight={300}>
-							WordPress Plugins
-						</Typography>
-					</Box>
-				</Paper>
+
+				<Stats />
+
 				<Paper
 					sx={{
 						display: 'flex',
