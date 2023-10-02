@@ -7,6 +7,7 @@ import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import { ReactFCC } from '../../interface/react';
 import { trackPageView } from '../../common/ga4';
 import Stats from '../../components/Stats/Stats';
+import Skills from '../../components/Skills/Skills';
 
 interface HomeProps {}
 
@@ -140,6 +141,8 @@ const Home: ReactFCC<HomeProps> = () => {
 				</Box>
 
 				<Stats />
+
+				<Skills />
 
 				<Paper
 					sx={{
