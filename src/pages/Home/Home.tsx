@@ -63,7 +63,7 @@ const Home: ReactFCC<HomeProps> = () => {
 						Ravi Gandhi
 					</Typography>
 					<Typography variant="h5" component="h2" gutterBottom>
-						Software Engineer, who loves clean codes
+						Software Engineer, who loves clean code
 					</Typography>
 					<Typography variant="body1" component="p" gutterBottom>
 						React | Vue | Angular | Node | PHP | MySQL | Firebase | AWS | GCP
