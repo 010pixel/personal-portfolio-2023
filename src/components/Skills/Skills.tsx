@@ -196,7 +196,7 @@ const Skills: ReactFCC<SkillsProps> = () => {
 					onClick={onShowSkillsClick}
 				>
 					<Typography variant="button" component="h3" fontWeight={300}>
-						{showAll ? 'Show Less' : 'Show More'}
+						{showAll ? 'Show Top' : 'Show All'}
 					</Typography>
 				</Button>
 			</Box>
