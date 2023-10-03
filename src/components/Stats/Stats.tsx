@@ -2,14 +2,24 @@ import React from 'react';
 import { Box, Grid, Paper, Typography } from '@mui/material';
 import CountUp from 'react-countup';
 import { ReactFCC } from '../../interface/react';
+import exntensions from '../../shared/data';
 
 interface StatsProps {}
+
+function monthDiff(d1: any, d2: any) {
+	let months;
+	months = (d2.getFullYear() - d1.getFullYear()) * 12;
+	months -= d1.getMonth();
+	months += d2.getMonth();
+	return months <= 0 ? 0 : months;
+}
+const yearsOfExperience = monthDiff(new Date(2011, 11), new Date()) / 12;
 
 const Stats: ReactFCC<StatsProps> = () => {
 	const statistics = [
 		{
 			title: 'Years of experience',
-			value: 12,
+			value: yearsOfExperience,
 			postfix: '+',
 		},
 		{
@@ -19,7 +29,7 @@ const Stats: ReactFCC<StatsProps> = () => {
 		},
 		{
 			title: 'Browser Extensions',
-			value: 9,
+			value: exntensions.length,
 			postfix: '',
 		},
 		{
@@ -29,7 +39,7 @@ const Stats: ReactFCC<StatsProps> = () => {
 		},
 		{
 			title: 'Users',
-			value: 30,
+			value: 50,
 			postfix: 'M+',
 		},
 	];
@@ -37,11 +47,7 @@ const Stats: ReactFCC<StatsProps> = () => {
 	const photos = [
 		'photo-1628126235206-5260b9ea6441',
 		'photo-1590907047706-ee9c08cf3189',
-		// 'photo-1419242902214-272b3f66ee7a',
 		'photo-1528722828814-77b9b83aafb2',
-		// 'photo-1446776811953-b23d57bd21aa',
-		// 'photo-1608178398319-48f814d0750c',
-		// 'photo-1610296669228-602fa827fc1f',
 	];
 
 	const randomPhoto = photos[Math.floor(Math.random() * photos.length)];
@@ -68,6 +74,22 @@ const Stats: ReactFCC<StatsProps> = () => {
 			}}
 			elevation={1}
 		>
+			<Typography
+				variant="h4"
+				component="h2"
+				fontWeight={300}
+				mb={{
+					xs: 4,
+					sm: 6,
+					md: 8,
+				}}
+				sx={{
+					textAlign: 'center',
+					color: '#fff',
+				}}
+			>
+				By the Numbers
+			</Typography>
 			<Grid
 				container
 				maxWidth="xl"
