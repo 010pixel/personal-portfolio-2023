@@ -5,6 +5,7 @@ import { trackPageView } from '../../common/ga4';
 import Stats from '../../components/Stats/Stats';
 import Skills from '../../components/Skills/Skills';
 import Banner from '../../components/Banner/Banner';
+import BrowserExtensions from '../../components/BrowserExtensions/BrowserExtensions';
 
 interface HomeProps {}
 
@@ -45,6 +46,8 @@ const Home: ReactFCC<HomeProps> = () => {
 				<Stats />
 
 				<Skills />
+
+				<BrowserExtensions />
 
 				<Paper
 					sx={{
