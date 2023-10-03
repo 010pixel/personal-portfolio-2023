@@ -11,18 +11,16 @@ const BrowserExtensions: ReactFCC<BrowserExtensionsProps> = () => {
 		<div data-testid="browser-extensions-component">
 			<CardsSlider
 				title="Browser Extensions"
-				items={exntensions
-					.filter((extension: BrowserExtension) => extension.showOnHome !== false)
-					.map((extension: BrowserExtension) => {
-						return {
-							slug: extension.slug,
-							name: extension.name,
-							logo: `/assets/images/browser-extensions/${extension.slug}/icon48.png`,
-							banner: `/assets/images/browser-extensions/${extension.slug}/marquee.png`,
-							content: extension.description || extension.links.map((link: ExtensionLink) => link.browser).join(', '),
-							links: extension.links,
-						};
-					})}
+				items={exntensions.map((extension: BrowserExtension) => {
+					return {
+						slug: extension.slug,
+						name: extension.name,
+						logo: `/assets/images/browser-extensions/${extension.slug}/icon48.png`,
+						banner: `/assets/images/browser-extensions/${extension.slug}/marquee.png`,
+						content: extension.description || extension.links.map((link: ExtensionLink) => link.browser).join(', '),
+						links: extension.links,
+					};
+				})}
 				moreIcon={<ChevronRightIcon />}
 				onMoreClick={(extension: any) => {
 					window.open(`https://browser.010pixel.com/item/${extension.slug}/`, '_blank');

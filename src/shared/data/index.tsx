@@ -13,32 +13,9 @@ export interface BrowserExtension {
 	logo: string;
 	banner: string;
 	links: ExtensionLink[];
-	showOnHome?: boolean;
 }
 
 const exntensions: BrowserExtension[] = [
-	{
-		id: 0,
-		slug: 'google-meet-easy-mute',
-		name: 'Easy Mute for Google Meet',
-		description:
-			'A simple extension for mute/unmute Google Meet calls from browser icon. Including options to by default turn microphone/camera off.',
-		colorText: 'white-text',
-		colorBg: 'light-blue darken-4',
-		logo: 'https://lh3.googleusercontent.com/Flt0qpUDNIvDQtUpdvpgW_XRLy4hqVCKcJ9YdR_ZABimLd4FbGe9-fMRrCPcI5wclKW4306oknbN6I5vopmvMZz4=w128-h128-e365-rj-sc0x00ffffff',
-		banner: '',
-		showOnHome: false,
-		links: [
-			{
-				browser: 'chrome',
-				url: 'https://chrome.google.com/webstore/detail/easy-mute-for-google-meet/lgdalbjhcglejepghfomkmngebhaelga',
-			},
-			{
-				browser: 'microsoft-edge',
-				url: 'https://microsoftedge.microsoft.com/addons/detail/easy-mute-for-google-meet/bnielpmobbfkagafnomghedppdlhobpb',
-			},
-		],
-	},
 	{
 		id: 1,
 		slug: 'easy-mute-for-google-meet',
