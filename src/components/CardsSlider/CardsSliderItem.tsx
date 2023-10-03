@@ -37,7 +37,11 @@ const CardsSliderItem: ReactFCC<CardsSliderItemProps> = (props) => {
 				}}
 			>
 				<CardHeader
-					avatar={<Avatar alt={item.name} src={item.logo} />}
+					avatar={
+						<Avatar alt={item.name} sx={{ backgroundColor: '#fff' }}>
+							<CardMedia component="img" image={item.logo} alt={item.name} loading="lazy" />
+						</Avatar>
+					}
 					action={
 						<IconButton aria-label="more" onClick={() => onMoreClick?.(item)}>
 							{moreIcon || <MoreVertIcon />}
@@ -50,6 +54,7 @@ const CardsSliderItem: ReactFCC<CardsSliderItemProps> = (props) => {
 						component="img"
 						image={item.banner}
 						alt={item.name}
+						loading="lazy"
 						sx={{
 							borderTop: '1px solid #eee',
 							borderBottom: '1px solid #eee',
