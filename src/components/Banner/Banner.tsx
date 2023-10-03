@@ -16,11 +16,16 @@ const Banner: ReactFCC<BannerProps> = () => {
 				sx={{
 					textAlign: 'center',
 					borderRadius: 5,
-					backgroundColor: 'rgba(255,255,255,0.3)',
-					border: '1px solid rgba(0,0,0,0.05)',
-					p: {
-						xs: 5,
+					// backgroundColor: 'rgba(255,255,255,0.3)',
+					// border: '1px solid rgba(0,0,0,0.05)',
+					px: {
+						xs: 2,
 						sm: 5,
+						md: 10,
+					},
+					py: {
+						xs: 8,
+						sm: 9,
 						md: 10,
 					},
 				}}
@@ -31,7 +36,7 @@ const Banner: ReactFCC<BannerProps> = () => {
 					fontWeight={100}
 					sx={{
 						fontSize: {
-							xs: '1.5rem',
+							xs: '1.7rem',
 							sm: '2rem',
 							md: '3rem',
 						},
@@ -44,7 +49,7 @@ const Banner: ReactFCC<BannerProps> = () => {
 					fontWeight={900}
 					sx={{
 						fontSize: {
-							xs: '3rem',
+							xs: '3.2rem',
 							sm: '4rem',
 							md: '6rem',
 						},
