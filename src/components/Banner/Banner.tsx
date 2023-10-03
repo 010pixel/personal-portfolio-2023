@@ -16,28 +16,96 @@ const Banner: ReactFCC<BannerProps> = () => {
 				sx={{
 					textAlign: 'center',
 					borderRadius: 5,
-					// backgroundColor: 'rgba(255,255,255,0.85)',
+					backgroundColor: 'rgba(255,255,255,0.3)',
+					border: '1px solid rgba(0,0,0,0.05)',
 					p: {
-						xs: 2,
+						xs: 5,
 						sm: 5,
 						md: 10,
 					},
 				}}
 			>
-				<Typography variant="h3" component="div" fontWeight={100}>
+				<Typography
+					variant="h3"
+					component="div"
+					fontWeight={100}
+					sx={{
+						fontSize: {
+							xs: '1.5rem',
+							sm: '2rem',
+							md: '3rem',
+						},
+					}}
+				>
 					Hi, I'm
 				</Typography>
-				<Typography variant="h1" component="h1" fontWeight={900}>
+				<Typography
+					component="h1"
+					fontWeight={900}
+					sx={{
+						fontSize: {
+							xs: '3rem',
+							sm: '4rem',
+							md: '6rem',
+						},
+					}}
+				>
 					Ravi Gandhi
 				</Typography>
-				<Typography variant="h5" component="h2" gutterBottom>
-					Software Engineer, who loves clean code
+				<Typography
+					component="h2"
+					gutterBottom
+					sx={{
+						fontSize: {
+							xs: '1.1rem',
+							sm: '1.3rem',
+							md: '1.7rem',
+						},
+						fontWeight: 500,
+						color: '#333',
+						display: 'flex',
+						flexDirection: {
+							xs: 'column',
+							sm: 'row',
+						},
+						justifyContent: 'center',
+						gap: {
+							xs: 0,
+							sm: 1,
+						},
+					}}
+				>
+					<span>Software Engineer,</span>
+					<span>who loves clean code</span>
 				</Typography>
-				<Typography variant="body1" component="p" gutterBottom>
-					React | Vue | Angular | Node | PHP | MySQL | Firebase | AWS | GCP
+				<Typography
+					component="p"
+					gutterBottom
+					sx={{
+						fontSize: {
+							xs: '0.8rem',
+							sm: '1rem',
+							md: '1.2rem',
+						},
+					}}
+				>
+					React | Vue | Angular | TypeScript | Node | PHP | MySQL | Firebase | AWS | GCP
 				</Typography>
-				<br />
-				<Box sx={{ mt: 2, display: 'flex', gap: 2, justifyContent: 'center' }}>
+				<Box
+					sx={{
+						mt: {
+							xs: 2,
+							sm: 3,
+							md: 4,
+						},
+						display: 'flex',
+						gap: {
+							xs: 1,
+							sm: 2,
+						},
+						justifyContent: 'center',
+					}}
+				>
 					<a href="https://linkedin.com/in/ravigandhi88/" target="_blank" rel="noopener noreferrer">
 						<IconButton
 							aria-label="LinkedIn"
