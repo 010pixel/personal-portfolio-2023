@@ -8,10 +8,11 @@ interface CardsSliderProps {
 	items: CardItemProps[];
 	moreIcon?: React.ReactNode;
 	onMoreClick?: (item: CardItemProps) => void;
+	mediaStyle?: any;
 }
 
 const CardsSlider: ReactFCC<CardsSliderProps> = (props) => {
-	const { title, items, moreIcon, onMoreClick } = props;
+	const { title, items, moreIcon, onMoreClick, mediaStyle } = props;
 	const photos = ['photo-1524802414218-3983cd08ed53', 'photo-1534996858221-380b92700493'];
 
 	const randomPhoto = photos[Math.floor(Math.random() * photos.length)];
@@ -84,7 +85,13 @@ const CardsSlider: ReactFCC<CardsSliderProps> = (props) => {
 						}}
 					>
 						{items.map((item) => (
-							<CardsSliderItem key={item.slug} item={item} moreIcon={moreIcon} onMoreClick={onMoreClick} />
+							<CardsSliderItem
+								key={item.slug}
+								item={item}
+								moreIcon={moreIcon}
+								onMoreClick={onMoreClick}
+								mediaStyle={mediaStyle}
+							/>
 						))}
 					</Box>
 				</Box>

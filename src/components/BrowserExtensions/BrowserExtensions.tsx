@@ -26,6 +26,13 @@ const BrowserExtensions: ReactFCC<BrowserExtensionsProps> = () => {
 				onMoreClick={(extension: any) => {
 					window.open(`https://browser.010pixel.com/item/${extension.slug}/`, '_blank');
 				}}
+				mediaStyle={{
+					height: {
+						xs: 114,
+						sm: 122,
+						md: 140,
+					},
+				}}
 			/>
 		</div>
 	);
