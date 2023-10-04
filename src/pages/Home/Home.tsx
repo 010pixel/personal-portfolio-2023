@@ -180,7 +180,7 @@ const Home: ReactFCC<HomeProps> = () => {
 						In my free time, I like to travel, read books, watch movies, play games, and learn new things.
 						<br />
 						<br />
-						Coding is like mediation for me.
+						Coding is like meditation for me.
 					</Typography>
 				</Paper>
 			</Container>
