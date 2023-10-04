@@ -10,7 +10,6 @@ const SlowLinearProgress = styled(LinearProgress)({
 		animationDuration: '8s',
 	},
 });
-console.log(SlowLinearProgress);
 
 const Skills: ReactFCC<SkillsProps> = () => {
 	const [showAll, setShowAll] = React.useState(false);
