@@ -4,7 +4,7 @@ import { ReactFCC } from '../../interface/react';
 import CardsSliderItem, { CardItemProps } from './CardsSliderItem';
 
 interface CardsSliderProps {
-	title: string;
+	title: React.ReactNode;
 	items: CardItemProps[];
 	moreIcon?: React.ReactNode;
 	onMoreClick?: (item: CardItemProps) => void;

@@ -1,8 +1,9 @@
 import React from 'react';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { ReactFCC } from '../../interface/react';
-import CardsSlider from '../CardsSlider/CardsSlider';
 import exntensions, { BrowserExtension, ExtensionLink } from '../../shared/data';
+import TypeWhenInView from '../TypeWhenInView/TypeWhenInView';
+import CardsSlider from '../CardsSlider/CardsSlider';
 
 interface BrowserExtensionsProps {}
 
@@ -10,7 +11,7 @@ const BrowserExtensions: ReactFCC<BrowserExtensionsProps> = () => {
 	return (
 		<div data-testid="browser-extensions-component">
 			<CardsSlider
-				title="Browser Extensions"
+				title={<TypeWhenInView text="Browser Extensions" once />}
 				items={exntensions.map((extension: BrowserExtension) => {
 					return {
 						slug: extension.slug,
