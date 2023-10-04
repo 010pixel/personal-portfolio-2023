@@ -58,6 +58,11 @@ const CardsSliderItem: ReactFCC<CardsSliderItemProps> = (props) => {
 						sx={{
 							borderTop: '1px solid #eee',
 							borderBottom: '1px solid #eee',
+							height: {
+								xs: 114,
+								sm: 122,
+								md: 140,
+							},
 						}}
 					/>
 				)}
