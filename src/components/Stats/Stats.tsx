@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Grid, Paper, Typography } from '@mui/material';
 import CountUp from 'react-countup';
+import { Typewriter } from 'react-simple-typewriter';
 import { ReactFCC } from '../../interface/react';
 import exntensions from '../../shared/data';
 
@@ -47,7 +48,7 @@ const Stats: ReactFCC<StatsProps> = () => {
 	const photos = [
 		'photo-1628126235206-5260b9ea6441',
 		'photo-1590907047706-ee9c08cf3189',
-		'photo-1528722828814-77b9b83aafb2',
+		// 'photo-1528722828814-77b9b83aafb2',
 	];
 
 	const randomPhoto = photos[Math.floor(Math.random() * photos.length)];
@@ -60,7 +61,7 @@ const Stats: ReactFCC<StatsProps> = () => {
 					sm: 10,
 					md: 15,
 				},
-				backgroundColor: '#fff',
+				background: 'linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(33,55,61,1) 35%, rgba(5,4,4,1) 100%)',
 				borderRadius: 5,
 				backgroundImage: `url(https://images.unsplash.com/${randomPhoto}?auto=format&fit=crop&w=1800&q=80)`,
 				backgroundSize: 'cover',
@@ -88,30 +89,43 @@ const Stats: ReactFCC<StatsProps> = () => {
 					color: '#fff',
 				}}
 			>
-				By the Numbers
+				<Typewriter words={['By the Numbers']} />
 			</Typography>
 			<Grid
 				container
 				maxWidth="xl"
 				spacing={0}
 				sx={{
-					gap: 5,
+					gap: {
+						xs: 3,
+						sm: 4,
+						md: 5,
+					},
 					justifyContent: 'center',
 					mx: 'auto',
 					textAlign: 'center',
 				}}
 			>
 				{statistics.map((statistic) => (
-					<Grid item xs={12} sm={4} md={3}>
+					<Grid key={statistic.value} item xs={4} sm={3} md={3}>
 						<Box
 							key={statistic.title}
 							sx={{
 								backgroundColor: 'rgba(0,0,0,0.05)',
 								borderRadius: 5,
-								border: '1px solid rgba(255,255,255,0.1)',
+								border: '1px solid rgba(255,255,255,0.5)',
 								height: '100%',
-								py: 4,
-								mx: 2,
+								py: {
+									xs: 3,
+									sm: 3,
+									md: 4,
+								},
+								px: 1,
+								mx: {
+									xs: 0,
+									sm: 1,
+									md: 2,
+								},
 								textShadow: '0 0 10px rgba(0,0,0,0.5)',
 								color: '#fff',
 								justifyContent: 'center',
@@ -119,11 +133,33 @@ const Stats: ReactFCC<StatsProps> = () => {
 								flexDirection: 'column',
 							}}
 						>
-							<Typography variant="h2" component="h3" fontWeight={400}>
+							<Typography
+								variant="h2"
+								component="h3"
+								fontWeight={400}
+								sx={{
+									fontSize: {
+										xs: '2rem',
+										sm: '2.4rem',
+										md: '3.75rem',
+									},
+								}}
+							>
 								<CountUp end={statistic.value} enableScrollSpy scrollSpyDelay={500} scrollSpyOnce />
 								{statistic.postfix}
 							</Typography>
-							<Typography variant="h5" component="div" fontWeight={300}>
+							<Typography
+								variant="h5"
+								component="div"
+								fontWeight={300}
+								sx={{
+									fontSize: {
+										xs: '1rem',
+										sm: '1.2rem',
+										md: '1.5rem',
+									},
+								}}
+							>
 								{statistic.title}
 							</Typography>
 						</Box>
