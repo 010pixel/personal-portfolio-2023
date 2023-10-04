@@ -56,7 +56,7 @@ const Banner: ReactFCC<BannerProps> = () => {
 						},
 					}}
 				>
-					<Typewriter words={['Ravi Gandhi']} />
+					R<Typewriter words={['avi Gandhi']} />
 				</Typography>
 				<Typography
 					component="h2"
