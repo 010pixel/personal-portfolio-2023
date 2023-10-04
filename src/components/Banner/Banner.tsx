@@ -4,6 +4,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
+import Typewriter from 'typewriter-effect';
 import { ReactFCC } from '../../interface/react';
 
 interface BannerProps {}
@@ -55,7 +56,15 @@ const Banner: ReactFCC<BannerProps> = () => {
 						},
 					}}
 				>
-					Ravi Gandhi
+					<Typewriter
+						options={{
+							strings: ['Ravi Gandhi'],
+							autoStart: true,
+							loop: false,
+							delay: 60,
+							cursor: '',
+						}}
+					/>
 				</Typography>
 				<Typography
 					component="h2"
