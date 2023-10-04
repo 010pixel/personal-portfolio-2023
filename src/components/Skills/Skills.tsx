@@ -1,6 +1,7 @@
 import React from 'react';
 import { Avatar, Box, Button, Grid, LinearProgress, Paper, Typography, styled } from '@mui/material';
 import { ReactFCC } from '../../interface/react';
+import TypeWhenInView from '../TypeWhenInView/TypeWhenInView';
 import skills from './constant';
 
 interface SkillsProps {}
@@ -75,7 +76,7 @@ const Skills: ReactFCC<SkillsProps> = () => {
 					// color: '#fff',
 				}}
 			>
-				Tech Exposure
+				<TypeWhenInView text="Tech Exposure" once />
 			</Typography>
 			<Grid
 				container

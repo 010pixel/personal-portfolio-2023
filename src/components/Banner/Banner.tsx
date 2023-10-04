@@ -4,7 +4,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
-import { Typewriter } from 'react-simple-typewriter';
+import TypeWhenInView from '../TypeWhenInView/TypeWhenInView';
 import { ReactFCC } from '../../interface/react';
 
 interface BannerProps {}
@@ -56,7 +56,7 @@ const Banner: ReactFCC<BannerProps> = () => {
 						},
 					}}
 				>
-					R<Typewriter words={['avi Gandhi']} />
+					R<TypeWhenInView text="avi Gandhi" once />
 				</Typography>
 				<Typography
 					component="h2"
