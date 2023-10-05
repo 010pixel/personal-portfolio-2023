@@ -1,0 +1,60 @@
+.statistic {
+	position: relative;
+	transition: all 0.3s ease-in-out;
+
+	::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 5px;
+		height: 5px;
+		border-radius: 50%;
+		background-color: #e0e0e0;
+		z-index: 999;
+		opacity: 0;
+		animation: moveGradient 2s infinite;
+		transform: scale(0) translate(-50%, -50%);
+	}
+
+	&:hover {
+		border-radius: 0;
+		::after {
+			opacity: 1;
+			transform: scale(1) translate(-50%, -50%);
+		}
+	}
+}
+
+@keyframes moveGradient {
+	7%,
+	18%,
+	32%,
+	43%,
+	68%,
+	82%,
+	93% {
+		opacity: 1;
+	}
+	25% {
+		left: 100%;
+		top: 0%;
+		width: 4px;
+		height: 4px;
+		opacity: 0;
+	}
+	50% {
+		left: 100%;
+		top: 100%;
+		width: 6px;
+		height: 6px;
+		opacity: 0;
+	}
+	75% {
+		left: 0%;
+		top: 100%;
+		width: 4px;
+		height: 4px;
+		opacity: 0;
+	}
+}

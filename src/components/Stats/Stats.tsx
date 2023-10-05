@@ -4,6 +4,7 @@ import CountUp from 'react-countup';
 import { ReactFCC } from '../../interface/react';
 import { photos, statistics } from './constants';
 import TypeWhenInView from '../TypeWhenInView/TypeWhenInView';
+import styles from './Stats.module.scss';
 
 interface StatsProps {}
 
@@ -66,6 +67,7 @@ const Stats: ReactFCC<StatsProps> = () => {
 				{statistics.map((statistic) => (
 					<Grid key={statistic.value} item xs={4} sm={3} md={3}>
 						<Box
+							className={styles.statistic}
 							key={statistic.title}
 							sx={{
 								backgroundColor: 'rgba(0,0,0,0.05)',
