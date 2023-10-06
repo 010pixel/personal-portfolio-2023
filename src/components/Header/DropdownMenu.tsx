@@ -6,7 +6,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 function scrollToTargetAdjusted(targetElement: string) {
 	const element = document.getElementById(targetElement) as any;
-	const headerOffset = 70;
+	const headerOffset = 10;
 	const elementPosition = element.getBoundingClientRect().top;
 	const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
