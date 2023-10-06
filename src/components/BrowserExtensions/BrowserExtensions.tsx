@@ -9,7 +9,10 @@ import SlickCardsSlider from '../CardsSlider/SlickCardSlider';
 interface BrowserExtensionsProps {}
 
 const BrowserExtensions: ReactFCC<BrowserExtensionsProps> = () => {
-	const photos = ['photo-1524802414218-3983cd08ed53', 'photo-1534996858221-380b92700493'];
+	const photos = [
+		// 'photo-1510906594845-bc082582c8cc',
+		'photo-1585830812756-896e704c7861',
+	];
 
 	const randomPhoto = photos[Math.floor(Math.random() * photos.length)];
 
@@ -31,7 +34,7 @@ const BrowserExtensions: ReactFCC<BrowserExtensionsProps> = () => {
 						sm: 8,
 						md: 10,
 					},
-					backgroundImage: `url(https://images.unsplash.com/${randomPhoto}?auto=format&fit=crop&w=1800&q=80)`,
+					backgroundImage: `url(https://images.unsplash.com/${randomPhoto}?auto=format&fit=crop&w=1400&q=80)`,
 					backgroundSize: 'cover',
 					backgroundPosition: 'center bottom',
 					backgroundRepeat: 'no-repeat',
