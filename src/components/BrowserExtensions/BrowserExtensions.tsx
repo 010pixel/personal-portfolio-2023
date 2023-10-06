@@ -18,6 +18,7 @@ const BrowserExtensions: ReactFCC<BrowserExtensionsProps> = () => {
 
 	return (
 		<Box
+			id="browser-extensions"
 			data-testid="browser-extensions-component"
 			sx={{
 				mx: {

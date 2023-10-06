@@ -13,6 +13,7 @@ const randomPhoto = photos[Math.floor(Math.random() * photos.length)];
 const Stats: ReactFCC<StatsProps> = () => {
 	return (
 		<Paper
+			id="by-the-numbers"
 			sx={{
 				py: {
 					xs: 5,

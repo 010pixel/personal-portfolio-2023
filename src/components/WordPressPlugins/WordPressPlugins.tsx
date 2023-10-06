@@ -17,7 +17,7 @@ const WordPressPlugins: ReactFCC<WordPressPluginsProps> = () => {
 	const randomPhoto = photos[Math.floor(Math.random() * photos.length)];
 
 	return (
-		<Box data-testid="wordpress-plugins-component">
+		<Box id="wordpress-plugins" data-testid="wordpress-plugins-component">
 			<Paper
 				sx={{
 					py: {

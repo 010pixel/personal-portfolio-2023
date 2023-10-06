@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { AppBar, Box, Button, Container, Toolbar, Typography } from '@mui/material';
 import { ReactFCC } from '../../interface/react';
 import { pages } from '../../shared/menu';
+import DropdownMenu from './DropdownMenu';
 
 interface HeaderProps {}
 
@@ -31,7 +32,7 @@ const Header: ReactFCC<HeaderProps> = () => {
 							</Typography>
 						</Button>
 					</Box>
-					<Box sx={{ flexGrow: 0, display: 'flex' }}>
+					<Box sx={{ flexGrow: 0, display: 'flex', gap: 1 }}>
 						<Button
 							size="small"
 							sx={{
@@ -44,6 +45,7 @@ const Header: ReactFCC<HeaderProps> = () => {
 						>
 							Download CV
 						</Button>
+						<DropdownMenu />
 						{pages.map((page) => (
 							<Button
 								key={page.title}

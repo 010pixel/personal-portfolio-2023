@@ -27,7 +27,7 @@ const Skills: ReactFCC<SkillsProps> = () => {
 	const onShowSkillsClick = () => {
 		setShowAll(!showAll);
 
-		document.getElementById('skills')?.scrollIntoView({
+		document.getElementById('tech-exposure')?.scrollIntoView({
 			behavior: 'smooth',
 			block: 'start',
 		});
@@ -60,7 +60,7 @@ const Skills: ReactFCC<SkillsProps> = () => {
 				// },
 			}}
 			elevation={0}
-			id="skills"
+			id="tech-exposure"
 		>
 			<Typography
 				variant="h4"
