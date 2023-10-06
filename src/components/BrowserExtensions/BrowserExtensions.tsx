@@ -1,4 +1,5 @@
 import React from 'react';
+import { Box } from '@mui/material';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { ReactFCC } from '../../interface/react';
 import exntensions, { BrowserExtension, ExtensionLink } from '../../shared/data';
@@ -9,7 +10,16 @@ interface BrowserExtensionsProps {}
 
 const BrowserExtensions: ReactFCC<BrowserExtensionsProps> = () => {
 	return (
-		<div data-testid="browser-extensions-component">
+		<Box
+			data-testid="browser-extensions-component"
+			sx={{
+				mx: {
+					xs: -2,
+					sm: -3,
+					md: -3,
+				},
+			}}
+		>
 			<SlickCardsSlider
 				title={<TypeWhenInView text="Browser Extensions" once />}
 				items={exntensions.map((extension: BrowserExtension) => {
@@ -34,7 +44,7 @@ const BrowserExtensions: ReactFCC<BrowserExtensionsProps> = () => {
 					},
 				}}
 			/>
-		</div>
+		</Box>
 	);
 };
 

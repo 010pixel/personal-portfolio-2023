@@ -121,8 +121,9 @@ const SlickCardsSlider: ReactFCC<SlickCardsSliderProps> = (props) => {
 						sm: 'fixed',
 						md: 'fixed',
 					},
+					borderRadius: 0,
 				}}
-				elevation={5}
+				elevation={1}
 			>
 				<Typography
 					variant="h4"

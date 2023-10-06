@@ -35,7 +35,11 @@ const CardsSliderItem: ReactFCC<CardsSliderItemProps> = (props) => {
 						md: 2,
 					},
 					display: 'block',
+					'&:hover': {
+						boxShadow: '0 4px 12px 0 rgba(0,0,0,0.22)',
+					},
 				}}
+				elevation={1}
 			>
 				<CardHeader
 					avatar={
