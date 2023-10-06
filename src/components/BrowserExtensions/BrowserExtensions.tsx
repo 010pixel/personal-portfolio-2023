@@ -3,14 +3,14 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { ReactFCC } from '../../interface/react';
 import exntensions, { BrowserExtension, ExtensionLink } from '../../shared/data';
 import TypeWhenInView from '../TypeWhenInView/TypeWhenInView';
-import CardsSlider from '../CardsSlider/CardsSlider';
+import SlickCardsSlider from '../CardsSlider/SlickCardSlider';
 
 interface BrowserExtensionsProps {}
 
 const BrowserExtensions: ReactFCC<BrowserExtensionsProps> = () => {
 	return (
 		<div data-testid="browser-extensions-component">
-			<CardsSlider
+			<SlickCardsSlider
 				title={<TypeWhenInView text="Browser Extensions" once />}
 				items={exntensions.map((extension: BrowserExtension) => {
 					return {

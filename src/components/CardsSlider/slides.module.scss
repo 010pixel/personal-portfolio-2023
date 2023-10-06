@@ -1,0 +1,14 @@
+.slickPrev:before,
+.slickNext:before {
+	content: url('../../../public/assets/images/slider/prev.svg');
+	display: block;
+	opacity: 1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.slickPrev:before {
+	transform: translate(-50%, -50%) rotate(180deg);
+}

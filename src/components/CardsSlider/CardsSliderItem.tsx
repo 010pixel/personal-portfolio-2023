@@ -25,7 +25,7 @@ const CardsSliderItem: ReactFCC<CardsSliderItemProps> = (props) => {
 			<Card
 				sx={{
 					width: {
-						xs: 280,
+						// xs: 280,
 						sm: 300,
 						md: 345,
 					},
