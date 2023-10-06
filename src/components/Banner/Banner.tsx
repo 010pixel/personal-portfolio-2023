@@ -95,7 +95,8 @@ const Banner: ReactFCC<BannerProps> = () => {
 						},
 					}}
 				>
-					React | Vue | Angular | TypeScript | Node | PHP | MySQL | Firebase | Lambda | Serverless | Docker | AWS | GCP
+					React | Vue | Angular | TypeScript | Node | PHP | MySQL | Firebase | CI/CD | Lambda | Serverless | Docker |
+					AWS | GCP
 				</Typography>
 				<Box
 					sx={{
