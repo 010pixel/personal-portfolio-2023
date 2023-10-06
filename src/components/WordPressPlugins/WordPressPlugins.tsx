@@ -17,7 +17,17 @@ const WordPressPlugins: ReactFCC<WordPressPluginsProps> = () => {
 	const randomPhoto = photos[Math.floor(Math.random() * photos.length)];
 
 	return (
-		<Box id="wordpress-plugins" data-testid="wordpress-plugins-component">
+		<Box
+			id="wordpress-plugins"
+			data-testid="wordpress-plugins-component"
+			sx={{
+				mx: {
+					xs: -2,
+					sm: -3,
+					md: -3,
+				},
+			}}
+		>
 			<Paper
 				sx={{
 					py: {
@@ -34,7 +44,7 @@ const WordPressPlugins: ReactFCC<WordPressPluginsProps> = () => {
 						sm: 'fixed',
 						md: 'fixed',
 					},
-					// borderRadius: 0,
+					borderRadius: 0,
 				}}
 				elevation={1}
 			>
