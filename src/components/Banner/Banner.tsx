@@ -216,6 +216,7 @@ const Banner: ReactFCC<BannerProps> = () => {
 						},
 					].map((item) => (
 						<CardHeader
+							key={item.slug}
 							sx={{
 								border: '1px solid rgba(0,0,0,0.1)',
 								borderRadius: 3,
