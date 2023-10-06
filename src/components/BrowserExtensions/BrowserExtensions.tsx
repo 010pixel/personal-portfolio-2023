@@ -61,7 +61,7 @@ const BrowserExtensions: ReactFCC<BrowserExtensionsProps> = () => {
 						textAlign: 'center',
 					}}
 				>
-					<TypeWhenInView text="Browser Extensions" once />
+					B<TypeWhenInView text="rowser Extensions" once />
 				</Typography>
 				<SlickCardsSlider
 					items={exntensions.map((extension: BrowserExtension) => {

@@ -76,7 +76,7 @@ const Skills: ReactFCC<SkillsProps> = () => {
 					// color: '#fff',
 				}}
 			>
-				<TypeWhenInView text="Tech Exposure" once />
+				T<TypeWhenInView text="ech Exposure" once />
 			</Typography>
 			<Grid
 				container

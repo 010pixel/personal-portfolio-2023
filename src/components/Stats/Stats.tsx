@@ -47,7 +47,7 @@ const Stats: ReactFCC<StatsProps> = () => {
 					color: '#fff',
 				}}
 			>
-				<TypeWhenInView text="By the Numbers" once />
+				B<TypeWhenInView text="y the Numbers" once />
 			</Typography>
 			<Grid
 				container
