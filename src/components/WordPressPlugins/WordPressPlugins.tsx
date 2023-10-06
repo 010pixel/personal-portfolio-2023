@@ -2,31 +2,22 @@ import React from 'react';
 import { Box, Paper, Typography } from '@mui/material';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { ReactFCC } from '../../interface/react';
-import { exntensions, BrowserExtension, ExtensionLink } from '../../shared/data';
+import { wordpressPlugins, WordPressPlugin } from '../../shared/data';
 import TypeWhenInView from '../TypeWhenInView/TypeWhenInView';
 import SlickCardsSlider from '../CardsSlider/SlickCardSlider';
 
-interface BrowserExtensionsProps {}
+interface WordPressPluginsProps {}
 
-const BrowserExtensions: ReactFCC<BrowserExtensionsProps> = () => {
+const WordPressPlugins: ReactFCC<WordPressPluginsProps> = () => {
 	const photos = [
 		// 'photo-1510906594845-bc082582c8cc',
-		'photo-1585830812756-896e704c7861',
+		'photo-1519337265831-281ec6cc8514',
 	];
 
 	const randomPhoto = photos[Math.floor(Math.random() * photos.length)];
 
 	return (
-		<Box
-			data-testid="browser-extensions-component"
-			sx={{
-				mx: {
-					xs: -2,
-					sm: -3,
-					md: -3,
-				},
-			}}
-		>
+		<Box data-testid="wordpress-plugins-component">
 			<Paper
 				sx={{
 					py: {
@@ -43,7 +34,7 @@ const BrowserExtensions: ReactFCC<BrowserExtensionsProps> = () => {
 						sm: 'fixed',
 						md: 'fixed',
 					},
-					borderRadius: 0,
+					// borderRadius: 0,
 				}}
 				elevation={1}
 			>
@@ -61,28 +52,28 @@ const BrowserExtensions: ReactFCC<BrowserExtensionsProps> = () => {
 						textAlign: 'center',
 					}}
 				>
-					B<TypeWhenInView text="rowser Extensions" once />
+					W<TypeWhenInView text="ordPress Plugins" once />
 				</Typography>
 				<SlickCardsSlider
-					items={exntensions.map((extension: BrowserExtension) => {
+					items={wordpressPlugins.map((wpPlugin: WordPressPlugin) => {
 						return {
-							slug: extension.slug,
-							name: extension.name,
-							logo: `/assets/images/browser-extensions/${extension.slug}/icon48.png`,
-							banner: `/assets/images/browser-extensions/${extension.slug}/marquee.png`,
-							content: extension.description || extension.links.map((link: ExtensionLink) => link.browser).join(', '),
-							links: extension.links,
+							slug: wpPlugin.slug,
+							name: wpPlugin.title,
+							logo: `/assets/images/wordpress/${wpPlugin.slug}/logo.svg`,
+							banner: `/assets/images/wordpress/${wpPlugin.slug}/banner.png`,
+							content: wpPlugin.description,
+							links: [wpPlugin.link],
 						};
 					})}
 					moreIcon={<ChevronRightIcon />}
-					onMoreClick={(extension: any) => {
-						window.open(`https://browser.010pixel.com/item/${extension.slug}/`, '_blank');
+					onMoreClick={(plugin: any) => {
+						window.open(plugin.links[0], '_blank');
 					}}
-					mediaStyle={{
-						height: {
-							xs: 114,
-							sm: 122,
-							md: 140,
+					cardStyle={{
+						width: {
+							// xs: 280,
+							sm: 300,
+							md: 540,
 						},
 					}}
 				/>
@@ -91,4 +82,4 @@ const BrowserExtensions: ReactFCC<BrowserExtensionsProps> = () => {
 	);
 };
 
-export default BrowserExtensions;
+export default WordPressPlugins;

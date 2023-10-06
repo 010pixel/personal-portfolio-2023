@@ -6,6 +6,7 @@ import Stats from '../../components/Stats/Stats';
 import Skills from '../../components/Skills/Skills';
 import Banner from '../../components/Banner/Banner';
 import BrowserExtensions from '../../components/BrowserExtensions/BrowserExtensions';
+import WordPressPlugins from '../../components/WordPressPlugins/WordPressPlugins';
 
 interface HomeProps {}
 
@@ -48,6 +49,8 @@ const Home: ReactFCC<HomeProps> = () => {
 				<Skills />
 
 				<BrowserExtensions />
+
+				<WordPressPlugins />
 
 				<Paper
 					sx={{

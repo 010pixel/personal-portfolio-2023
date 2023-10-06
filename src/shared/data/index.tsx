@@ -15,7 +15,7 @@ export interface BrowserExtension {
 	links: ExtensionLink[];
 }
 
-const exntensions: BrowserExtension[] = [
+export const exntensions: BrowserExtension[] = [
 	{
 		id: 1,
 		slug: 'easy-mute-for-google-meet',
@@ -267,4 +267,44 @@ const exntensions: BrowserExtension[] = [
 	},
 ];
 
-export default exntensions;
+export interface WordPressPlugin {
+	id: number;
+	slug: string;
+	title: string;
+	description: string;
+	logo: string;
+	banner: string;
+	link: string;
+}
+
+export const wordpressPlugins: WordPressPlugin[] = [
+	{
+		id: 1,
+		slug: 'template-list-metabox-by-010pixel',
+		title: 'Template List Metabox',
+		description:
+			'This plugin will allow you to select custom posts types for which you want to show metabox of template list dropdown menu.',
+		logo: 'https://cdn.vuetifyjs.com/images/cards/house.jpg',
+		banner: '',
+		link: 'https://wordpress.org/plugins/template-list-metabox-by-010pixel/advanced/',
+	},
+	{
+		id: 2,
+		slug: 'admin-menu-class-by-010pixel',
+		title: 'Admin Menu Class by 010Pixel',
+		description: 'This plugin is for Theme Developers to create menu on left navigation in wordpress admin panel.',
+		logo: 'https://cdn.vuetifyjs.com/images/cards/house.jpg',
+		banner: '',
+		link: 'https://wordpress.org/plugins/admin-menu-class-by-010pixel/advanced/',
+	},
+	{
+		id: 3,
+		slug: 'wp-alternative-slug-by-010pixel',
+		title: 'WP Alternative Slug by 010Pixel',
+		description:
+			'A new way to create multiple URLs for the same post. Very useful when creating url for multiple languages.',
+		logo: 'https://cdn.vuetifyjs.com/images/cards/house.jpg',
+		banner: '',
+		link: 'https://wordpress.org/plugins/wp-alternative-slug-by-010pixel/advanced/',
+	},
+];

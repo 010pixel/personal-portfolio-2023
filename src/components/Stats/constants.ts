@@ -1,4 +1,4 @@
-import exntensions from '../../shared/data';
+import { exntensions } from '../../shared/data';
 import { monthDiff } from './utils';
 
 export const photos = [

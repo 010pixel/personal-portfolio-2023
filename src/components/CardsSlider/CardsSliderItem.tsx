@@ -15,11 +15,12 @@ interface CardsSliderItemProps {
 	item: CardItemProps;
 	moreIcon?: React.ReactNode;
 	onMoreClick?: (item: CardItemProps) => void;
+	cardStyle?: any;
 	mediaStyle?: any;
 }
 
 const CardsSliderItem: ReactFCC<CardsSliderItemProps> = (props) => {
-	const { item, moreIcon, onMoreClick, mediaStyle } = props;
+	const { item, moreIcon, onMoreClick, cardStyle, mediaStyle } = props;
 	return (
 		<div data-testid="cards-slider-item-component">
 			<Card
@@ -38,6 +39,7 @@ const CardsSliderItem: ReactFCC<CardsSliderItemProps> = (props) => {
 					'&:hover': {
 						boxShadow: '0 4px 12px 0 rgba(0,0,0,0.22)',
 					},
+					...cardStyle,
 				}}
 				elevation={1}
 			>

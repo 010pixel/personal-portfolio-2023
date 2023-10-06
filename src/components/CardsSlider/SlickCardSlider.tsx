@@ -11,7 +11,9 @@ interface SlickCardsSliderProps {
 	items: CardItemProps[];
 	moreIcon?: React.ReactNode;
 	onMoreClick?: (item: CardItemProps) => void;
+	cardStyle?: any;
 	mediaStyle?: any;
+	sliderConfig?: any;
 }
 
 function SampleNextArrow(props: any) {
@@ -58,7 +60,7 @@ function SamplePrevArrow(props: any) {
 }
 
 const SlickCardsSlider: ReactFCC<SlickCardsSliderProps> = (props) => {
-	const { items, moreIcon, onMoreClick, mediaStyle } = props;
+	const { items, moreIcon, onMoreClick, cardStyle, mediaStyle, sliderConfig } = props;
 	const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
 
 	useEffect(() => {
@@ -95,8 +97,9 @@ const SlickCardsSlider: ReactFCC<SlickCardsSliderProps> = (props) => {
 					},
 				},
 			],
+			...sliderConfig,
 		}),
-		[windowWidth]
+		[windowWidth, sliderConfig]
 	);
 
 	return (
@@ -108,6 +111,7 @@ const SlickCardsSlider: ReactFCC<SlickCardsSliderProps> = (props) => {
 						item={item}
 						moreIcon={moreIcon}
 						onMoreClick={onMoreClick}
+						cardStyle={cardStyle}
 						mediaStyle={mediaStyle}
 					/>
 				))}
