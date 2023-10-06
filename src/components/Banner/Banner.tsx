@@ -5,7 +5,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import TypeWhenInView from '../TypeWhenInView/TypeWhenInView';
-import styles from '../../styles/common.module.scss';
 import { ReactFCC } from '../../interface/react';
 
 interface BannerProps {}
@@ -216,7 +215,6 @@ const Banner: ReactFCC<BannerProps> = () => {
 						},
 					].map((item) => (
 						<CardHeader
-							className={`${styles.animatedDotBorder} ${styles['animatedDotBorder--black']}`}
 							sx={{
 								border: '1px solid rgba(0,0,0,0.1)',
 								borderRadius: 3,
