@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo } from 'react';
-import { Box, Paper, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -8,7 +8,6 @@ import CardsSliderItem, { CardItemProps } from './CardsSliderItem';
 import styles from './slides.module.scss';
 
 interface SlickCardsSliderProps {
-	title: React.ReactNode;
 	items: CardItemProps[];
 	moreIcon?: React.ReactNode;
 	onMoreClick?: (item: CardItemProps) => void;
@@ -59,11 +58,8 @@ function SamplePrevArrow(props: any) {
 }
 
 const SlickCardsSlider: ReactFCC<SlickCardsSliderProps> = (props) => {
-	const { title, items, moreIcon, onMoreClick, mediaStyle } = props;
+	const { items, moreIcon, onMoreClick, mediaStyle } = props;
 	const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
-	const photos = ['photo-1524802414218-3983cd08ed53', 'photo-1534996858221-380b92700493'];
-
-	const randomPhoto = photos[Math.floor(Math.random() * photos.length)];
 
 	useEffect(() => {
 		function handleResize() {
@@ -105,56 +101,17 @@ const SlickCardsSlider: ReactFCC<SlickCardsSliderProps> = (props) => {
 
 	return (
 		<div data-testid="slick-cards-slider-component">
-			<Paper
-				sx={{
-					py: {
-						xs: 6,
-						sm: 8,
-						md: 10,
-					},
-					backgroundImage: `url(https://images.unsplash.com/${randomPhoto}?auto=format&fit=crop&w=1800&q=80)`,
-					backgroundSize: 'cover',
-					backgroundPosition: 'center bottom',
-					backgroundRepeat: 'no-repeat',
-					backgroundAttachment: {
-						xs: 'scroll',
-						sm: 'fixed',
-						md: 'fixed',
-					},
-					borderRadius: 0,
-				}}
-				elevation={1}
-			>
-				<Typography
-					variant="h4"
-					component="h2"
-					fontWeight={300}
-					sx={{
-						mb: {
-							xs: 4,
-							sm: 6,
-							md: 8,
-						},
-						color: '#fff',
-						textAlign: 'center',
-					}}
-				>
-					{title}
-				</Typography>
-				<Box>
-					<Slider {...settings}>
-						{items.map((item) => (
-							<CardsSliderItem
-								key={item.slug}
-								item={item}
-								moreIcon={moreIcon}
-								onMoreClick={onMoreClick}
-								mediaStyle={mediaStyle}
-							/>
-						))}
-					</Slider>
-				</Box>
-			</Paper>
+			<Slider {...settings}>
+				{items.map((item) => (
+					<CardsSliderItem
+						key={item.slug}
+						item={item}
+						moreIcon={moreIcon}
+						onMoreClick={onMoreClick}
+						mediaStyle={mediaStyle}
+					/>
+				))}
+			</Slider>
 		</div>
 	);
 };
