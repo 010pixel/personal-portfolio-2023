@@ -1,10 +1,11 @@
 import React from 'react';
-import { Box, IconButton, Tooltip, Typography } from '@mui/material';
+import { Avatar, Box, CardHeader, CardMedia, IconButton, Tooltip, Typography } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import TypeWhenInView from '../TypeWhenInView/TypeWhenInView';
+import styles from '../../styles/common.module.scss';
 import { ReactFCC } from '../../interface/react';
 
 interface BannerProps {}
@@ -179,6 +180,92 @@ const Banner: ReactFCC<BannerProps> = () => {
 							</Tooltip>
 						</IconButton>
 					</a>
+				</Box>
+				<Box
+					sx={{
+						display: 'flex',
+						flexDirection: {
+							// xs: 'column',
+							sm: 'row',
+						},
+						justifyContent: 'center',
+						gap: {
+							xs: 1,
+							sm: 2,
+						},
+						mt: {
+							xs: 2,
+							sm: 3,
+							md: 4,
+						},
+						textAlign: 'left',
+					}}
+				>
+					{[
+						{
+							title: '010Pixel',
+							slug: '010pixel',
+							img: 'https://yt3.googleusercontent.com/ytc/APkrFKYonKWKGaLCWKjfjsMWdHcI4btZQ5JunqsWF40=s176-c-k-c0x00ffffff-no-rj',
+							url: 'https://www.youtube.com/010Pixel',
+						},
+						{
+							title: 'SoloTraveller',
+							slug: 'solotraveller',
+							img: 'https://yt3.googleusercontent.com/ytc/APkrFKY5k3SM9JYSXIYtkSs0YRGzWEd3icRf3zsRqDhs=s176-c-k-c0x00ffffff-no-rj',
+							url: 'https://www.youtube.com/SoloTraveller',
+						},
+					].map((item) => (
+						<CardHeader
+							className={`${styles.animatedDotBorder} ${styles['animatedDotBorder--black']}`}
+							sx={{
+								border: '1px solid rgba(0,0,0,0.1)',
+								borderRadius: 3,
+								flex: '1 1 0',
+								maxWidth: 300,
+								transition: 'border 0.3s ease-in-out',
+								':hover': {
+									border: '1px solid rgba(0,0,0,0.5)',
+								},
+								cursor: 'pointer',
+								p: {
+									xs: 1,
+									sm: 2,
+								},
+							}}
+							onClick={() => window.open(item.url, '_blank')}
+							avatar={
+								<Avatar
+									sx={{
+										backgroundColor: '#fff',
+										width: {
+											xs: 32,
+											sm: 48,
+										},
+										height: {
+											xs: 32,
+											sm: 48,
+										},
+									}}
+								>
+									<CardMedia component="img" image={item.img} loading="lazy" />
+								</Avatar>
+							}
+							title={
+								<Typography
+									fontWeight={500}
+									color="#666"
+									sx={{
+										fontSize: {
+											xs: '0.8rem',
+											sm: '1rem',
+										},
+									}}
+								>
+									{item.title}
+								</Typography>
+							}
+						/>
+					))}
 				</Box>
 			</Box>
 		</div>
