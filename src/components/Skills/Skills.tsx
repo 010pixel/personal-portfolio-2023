@@ -46,7 +46,7 @@ const Skills: ReactFCC<SkillsProps> = () => {
 					sm: 4,
 					md: 6,
 				},
-				backgroundColor: '#fff',
+				backgroundColor: 'transparent',
 				borderRadius: 5,
 				// backgroundImage:
 				// 	'url(https://images.unsplash.com/photo-1526666923127-b2970f64b422?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=960&q=80)',
@@ -59,7 +59,7 @@ const Skills: ReactFCC<SkillsProps> = () => {
 				// 	md: 'fixed',
 				// },
 			}}
-			elevation={1}
+			elevation={0}
 			id="skills"
 		>
 			<Typography
