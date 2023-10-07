@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"start": "react-scripts start",
-		"build": "react-scripts build",
+		"build": "react-scripts build && cp build/index.html build/404.html",
 		"test": "react-scripts test",
 		"test:ci": "cross-env CI=true react-scripts test",
 		"test:coverage": "npm run test:ci -- --coverage --color",
