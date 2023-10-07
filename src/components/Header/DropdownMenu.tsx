@@ -41,6 +41,10 @@ const menuItems = [
 		title: 'About Me',
 		slug: 'about-me',
 	},
+	{
+		title: 'Project Areas',
+		slug: 'project-areas',
+	},
 ];
 
 export default function DropdownMenu2() {

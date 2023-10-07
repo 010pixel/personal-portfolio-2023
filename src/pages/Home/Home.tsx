@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Container, Paper, Typography } from '@mui/material';
+import { Container } from '@mui/material';
 import { ReactFCC } from '../../interface/react';
 import { trackPageView } from '../../common/ga4';
 import Stats from '../../components/Stats/Stats';
@@ -9,6 +9,7 @@ import BrowserExtensions from '../../components/BrowserExtensions/BrowserExtensi
 import WordPressPlugins from '../../components/WordPressPlugins/WordPressPlugins';
 import Blogs from '../../components/Blogs/Blogs';
 import AboutMe from '../../components/AboutMe/AboutMe';
+import ProjectAreas from '../../components/ProjectAreas/ProjectAreas';
 
 interface HomeProps {}
 
@@ -58,45 +59,7 @@ const Home: ReactFCC<HomeProps> = () => {
 
 				<AboutMe />
 
-				<Paper
-					sx={{
-						display: 'flex',
-						flexDirection: {
-							xs: 'column',
-						},
-						gap: {
-							xs: 1,
-							sm: 5,
-						},
-						justifyContent: 'center',
-						alignItems: 'center',
-						p: {
-							xs: 5,
-							sm: 8,
-							md: 10,
-						},
-						backgroundColor: '#fff',
-						borderRadius: 5,
-					}}
-					elevation={1}
-				>
-					<Typography variant="h3" component="h3" gutterBottom>
-						Project Areas
-					</Typography>
-					<ul>
-						<li>Web Applications</li>
-						<li>
-							Browser Extensions <small>(Google Chrome, Mozilla Firefox, Microsoft Edge)</small>
-						</li>
-						<li>WordPress Plugins</li>
-						<li>
-							Cloud Computing <small>(AWS, GCP)</small>
-						</li>
-						<li>
-							Artificial Intelligence <small>(experimenting)</small>
-						</li>
-					</ul>
-				</Paper>
+				<ProjectAreas />
 			</Container>
 		</div>
 	);
