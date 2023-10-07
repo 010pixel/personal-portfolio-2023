@@ -62,23 +62,28 @@ const AboutMe: ReactFCC<AboutMeProps> = () => {
 				>
 					<p>
 						Experienced in <b>FinTech startups</b>, Financial Institution, <b>Media</b> Network, <b>Newsroom</b>,
-						<b>Education</b> Institution and small service based companies with <b>cross-country</b>,{' '}
-						<b>cross-culture</b>, <b>cross-functional</b> collaboration.
+						<b>Education</b> Institution and small service based companies, I've been fortunate to collaborate across
+						<b>countries</b>, <b>cultures</b>, and <b>functions</b>.
 					</p>
 					<p>
-						I like to build stuff to <b>solve</b> real world problems and make people's life easier by making things
-						more <b>accessible</b> and <b>efficient</b>.
+						My journey in the software industry spans over a decade, involving diverse projects and technologies, both
+						on the frontend and backend.
 					</p>
 					<p>
-						I have been working in the software industry for over a decade. I have worked on various projects and
-						technologies including both frontend and backend.
+						Creating things that <b>solve</b> real <b>problems</b> and make life easier for <b>people</b> is something I
+						enjoy. It's about making things more <b>accessible</b> and <b>efficient</b> for everyone.
 					</p>
 					<p>
-						I like to build softwares and make it available to public to free. This is my way of contributing to the
-						world of free software so that the next generation can still get free softwares.
+						In my free time, I develop softwares and offer it to the public free. This is my way of contributing to the
+						world of free software so that the next generation can still access free software.
 					</p>
-					<p>In my free time, I like to travel, watch movies, play games, and learn new things and of course code.</p>
-					<p>Coding is a kind of meditation for me.</p>
+					<p>
+						Coding serves as a form of meditation for me, allowing me to find peace and creativity in the digital realm.
+					</p>
+					<p>
+						Beyond coding, I also like to travel, watch movies, play outdoor sports, do some martial arts, and learn new
+						things.
+					</p>
 				</Typography>
 			</Box>
 		</Paper>
