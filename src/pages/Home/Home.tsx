@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Box, Container, Paper, Typography } from '@mui/material';
+import { Container, Paper, Typography } from '@mui/material';
 import { ReactFCC } from '../../interface/react';
 import { trackPageView } from '../../common/ga4';
 import Stats from '../../components/Stats/Stats';
@@ -7,6 +7,7 @@ import Skills from '../../components/Skills/Skills';
 import Banner from '../../components/Banner/Banner';
 import BrowserExtensions from '../../components/BrowserExtensions/BrowserExtensions';
 import WordPressPlugins from '../../components/WordPressPlugins/WordPressPlugins';
+import Blogs from '../../components/Blogs/Blogs';
 
 interface HomeProps {}
 
@@ -50,6 +51,8 @@ const Home: ReactFCC<HomeProps> = () => {
 
 				<BrowserExtensions />
 
+				<Blogs />
+
 				<WordPressPlugins />
 
 				<Paper
@@ -91,54 +94,7 @@ const Home: ReactFCC<HomeProps> = () => {
 						</li>
 					</ul>
 				</Paper>
-				<Paper
-					sx={{
-						display: 'flex',
-						flexDirection: {
-							xs: 'column',
-						},
-						gap: {
-							xs: 1,
-							sm: 5,
-						},
-						justifyContent: 'center',
-						alignItems: 'center',
-						textAlign: 'center',
-						p: {
-							xs: 5,
-							sm: 8,
-							md: 10,
-						},
-						backgroundColor: '#fff',
-						borderRadius: 5,
-					}}
-					elevation={1}
-				>
-					<Typography variant="h3" component="h3" gutterBottom>
-						Blogging
-					</Typography>
-					<Box
-						sx={{
-							display: 'flex',
-							flexDirection: 'column',
-							gap: 2,
-							a: {
-								color: '#333',
-								transition: 'color 0.3s ease-in-out',
-								'&:hover': {
-									color: 'primary.main',
-								},
-							},
-						}}
-					>
-						<a href="https://medium.com/@ravikant.gandhi" target="_blank" rel="noopener noreferrer">
-							Ravi
-						</a>
-						<a href="https://010pixel.medium.com/" target="_blank" rel="noopener noreferrer">
-							010Pixel
-						</a>
-					</Box>
-				</Paper>
+
 				<Paper
 					sx={{
 						display: 'flex',

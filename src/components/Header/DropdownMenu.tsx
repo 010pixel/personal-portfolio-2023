@@ -30,6 +30,10 @@ const menuItems = [
 		slug: 'browser-extensions',
 	},
 	{
+		title: 'Blogging',
+		slug: 'blogging',
+	},
+	{
 		title: 'WordPress Plugins',
 		slug: 'wordpress-plugins',
 	},
