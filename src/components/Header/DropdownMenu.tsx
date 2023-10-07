@@ -37,6 +37,10 @@ const menuItems = [
 		title: 'WordPress Plugins',
 		slug: 'wordpress-plugins',
 	},
+	{
+		title: 'About Me',
+		slug: 'about-me',
+	},
 ];
 
 export default function DropdownMenu2() {

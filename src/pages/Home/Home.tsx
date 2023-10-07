@@ -8,6 +8,7 @@ import Banner from '../../components/Banner/Banner';
 import BrowserExtensions from '../../components/BrowserExtensions/BrowserExtensions';
 import WordPressPlugins from '../../components/WordPressPlugins/WordPressPlugins';
 import Blogs from '../../components/Blogs/Blogs';
+import AboutMe from '../../components/AboutMe/AboutMe';
 
 interface HomeProps {}
 
@@ -55,6 +56,8 @@ const Home: ReactFCC<HomeProps> = () => {
 
 				<WordPressPlugins />
 
+				<AboutMe />
+
 				<Paper
 					sx={{
 						display: 'flex',
@@ -93,54 +96,6 @@ const Home: ReactFCC<HomeProps> = () => {
 							Artificial Intelligence <small>(experimenting)</small>
 						</li>
 					</ul>
-				</Paper>
-
-				<Paper
-					sx={{
-						display: 'flex',
-						flexDirection: {
-							xs: 'column',
-						},
-						gap: {
-							xs: 1,
-							sm: 5,
-						},
-						justifyContent: 'center',
-						alignItems: 'center',
-						p: {
-							xs: 5,
-							sm: 8,
-							md: 10,
-						},
-						backgroundColor: '#fff',
-						borderRadius: 5,
-					}}
-				>
-					<Typography variant="h2" component="h3" gutterBottom>
-						About Me
-					</Typography>
-					<Typography variant="body1" component="p" gutterBottom>
-						Experienced in <b>FinTech startups</b>, Financial Institution, <b>Media</b> Network, <b>Newsroom</b>,
-						<b>Education</b> Institution and small service based companies with <b>cross-country</b>,{' '}
-						<b>cross-culture</b>, <b>cross-functional</b> collaboration.
-					</Typography>
-					<Typography variant="body1" component="p" gutterBottom>
-						I like to build stuff to <b>solve</b> real world problems and make people's life easier by making things
-						more <b>accessible</b> and <b>efficient</b>.
-						<br />
-						<br />I have been working in the software industry for over I have worked on various projects and
-						technologies including both frontend and backend.
-						<br />
-						<br />
-						I like to build softwares and make it available to public to free. This is my way of contributing to the
-						world of free software so that the next generation can still get free softwares.
-						<br />
-						<br />
-						In my free time, I like to travel, read books, watch movies, play games, and learn new things.
-						<br />
-						<br />
-						Coding is like meditation for me.
-					</Typography>
 				</Paper>
 			</Container>
 		</div>
