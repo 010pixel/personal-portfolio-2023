@@ -74,8 +74,8 @@ const AboutMe: ReactFCC<AboutMeProps> = () => {
 						enjoy. It's about making things more <b>accessible</b> and <b>efficient</b> for everyone.
 					</p>
 					<p>
-						In my free time, I develop softwares and offer it to the public free. This is my way of contributing to the
-						world of free software so that the next generation can still access free software.
+						In my free time, I develop softwares and offer it to the public for free. This is my way of contributing to
+						the world of free softwares so that the next generation can still access free softwares.
 					</p>
 					<p>
 						Coding serves as a form of meditation for me, allowing me to find peace and creativity in the digital realm.
