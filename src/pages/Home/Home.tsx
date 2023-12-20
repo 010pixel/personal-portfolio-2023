@@ -7,6 +7,7 @@ import Skills from '../../components/Skills/Skills';
 import Banner from '../../components/Banner/Banner';
 import BrowserExtensions from '../../components/BrowserExtensions/BrowserExtensions';
 import WordPressPlugins from '../../components/WordPressPlugins/WordPressPlugins';
+import Gpts from '../../components/Gpts/Gpts';
 import Blogs from '../../components/Blogs/Blogs';
 import AboutMe from '../../components/AboutMe/AboutMe';
 import ProjectAreas from '../../components/ProjectAreas/ProjectAreas';
@@ -52,6 +53,8 @@ const Home: ReactFCC<HomeProps> = () => {
 				<Skills />
 
 				<BrowserExtensions />
+
+				<Gpts />
 
 				<Blogs />
 

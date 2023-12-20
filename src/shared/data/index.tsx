@@ -15,6 +15,14 @@ export interface BrowserExtension {
 	links: ExtensionLink[];
 }
 
+export interface GPTs {
+	id: number;
+	slug: string;
+	name: string;
+	description: string;
+	link: string;
+}
+
 export const exntensions: BrowserExtension[] = [
 	{
 		id: 1,
@@ -264,6 +272,44 @@ export const exntensions: BrowserExtension[] = [
 				url: 'https://chrome.google.com/webstore/detail/live-bookmarks/ihfolgbjkckclahmpoejnoglilaeenji',
 			},
 		],
+	},
+];
+
+export const gpts: GPTs[] = [
+	{
+		id: 1,
+		name: 'A Friend in Need',
+		slug: 'a-friend-in-need',
+		description: 'An Empathetic virtual therapist for anonymous emotional support.',
+		link: 'https://chat.openai.com/g/g-xxCttMBB1-a-friend-in-need',
+	},
+	{
+		id: 2,
+		name: 'Crack Me If You Can',
+		slug: 'crack-me-if-you-can',
+		description: 'I craft and present riddles with visual clues.',
+		link: 'https://chat.openai.com/g/g-PHbM8AQdt-crack-me-if-you-can',
+	},
+	{
+		id: 3,
+		name: 'The Ultimate Negotiator',
+		slug: 'the-ultimate-negotiator',
+		description: 'Formal, friendly negotiator avoiding sensitive topics.',
+		link: 'https://chat.openai.com/g/g-H3FcXfnho-the-ultimate-negotiator',
+	},
+	{
+		id: 4,
+		name: "Boyfriend's Nego Helper",
+		slug: 'boyfriends-nego-helper',
+		description: 'Helps boyfriends negotiate decisions with girlfriends.',
+		link: 'https://chat.openai.com/g/g-XWqkm2Fcq-boyfriend-s-nego-helper',
+	},
+	{
+		id: 5,
+		name: 'Slick Chatster',
+		slug: 'slick-chatster',
+		description: "A playful, teasing GPT with 'gangster' flair.",
+		link: 'https://chat.openai.com/g/g-V5FugoHnr-slick-chatster',
 	},
 ];
 

@@ -30,6 +30,10 @@ const menuItems = [
 		slug: 'browser-extensions',
 	},
 	{
+		title: 'GPTs (OpenAI)',
+		slug: 'gpts',
+	},
+	{
 		title: 'Blogging',
 		slug: 'blogging',
 	},
