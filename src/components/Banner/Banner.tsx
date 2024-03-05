@@ -146,6 +146,45 @@ const Banner: ReactFCC<BannerProps> = () => {
 							</Tooltip>
 						</IconButton>
 					</a>
+					<a href="https://g.dev/010pixel" target="_blank" rel="noopener noreferrer">
+						<IconButton
+							aria-label="Google Developer"
+							sx={{
+								border: '1px solid transparent',
+								'&:hover': {
+									border: '1px solid',
+								},
+							}}
+						>
+							<Tooltip title="Google Developer" arrow>
+								<Avatar
+									sx={{ width: 24, height: 24 }}
+									alt="Ggogle Developer"
+									src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg"
+								/>
+							</Tooltip>
+						</IconButton>
+					</a>
+					<a href="https://stackoverflow.com/users/1945218/010-pixel" target="_blank" rel="noopener noreferrer">
+						<IconButton
+							aria-label="Stack Overflow"
+							sx={{
+								border: '1px solid transparent',
+								'&:hover': {
+									border: '1px solid',
+								},
+							}}
+						>
+							<Tooltip title="Stack Overflow" arrow>
+								<Avatar
+									variant="square"
+									sx={{ width: 24, height: 24 }}
+									alt="Ggogle Developer"
+									src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/stackoverflow/stackoverflow-original.svg"
+								/>
+							</Tooltip>
+						</IconButton>
+					</a>
 					<a href="https://instagram.com/SoloTraveller.Official" target="_blank" rel="noopener noreferrer">
 						<IconButton
 							aria-label="Instagram"
