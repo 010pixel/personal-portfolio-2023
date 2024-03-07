@@ -27,6 +27,6 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Deploy React to GitHub Pages
-        uses: bitovi/github-actions-react-to-github-pages@v1.2.1
+        uses: bitovi/github-actions-react-to-github-pages@v1.2.3
         with:
           path: build # change to your build folder
