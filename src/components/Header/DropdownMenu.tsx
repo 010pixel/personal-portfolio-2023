@@ -3,18 +3,7 @@ import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-
-function scrollToTargetAdjusted(targetElement: string) {
-	const element = document.getElementById(targetElement) as any;
-	const headerOffset = 10;
-	const elementPosition = element.getBoundingClientRect().top;
-	const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-	window.scrollTo({
-		top: offsetPosition,
-		behavior: 'smooth',
-	});
-}
+import { scrollToTargetAdjusted } from '../../shared/utils';
 
 const menuItems = [
 	{
