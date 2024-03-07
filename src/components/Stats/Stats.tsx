@@ -5,6 +5,7 @@ import { ReactFCC } from '../../interface/react';
 import { photos, statistics } from './constants';
 import TypeWhenInView from '../TypeWhenInView/TypeWhenInView';
 import styles from './Stats.module.scss';
+import { scrollToTargetAdjusted } from '../../shared/utils';
 
 interface StatsProps {}
 
@@ -70,7 +71,11 @@ const Stats: ReactFCC<StatsProps> = () => {
 						<Box
 							className={styles.statistic}
 							key={statistic.title}
+							onClick={() => {
+								if (statistic.slug) scrollToTargetAdjusted(statistic.slug);
+							}}
 							sx={{
+								cursor: statistic.slug ? 'pointer' : 'inherit',
 								backgroundColor: 'rgba(0,0,0,0.05)',
 								borderRadius: 5,
 								border: '1px solid rgba(255,255,255,0.5)',

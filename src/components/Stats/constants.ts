@@ -1,4 +1,4 @@
-import { exntensions } from '../../shared/data';
+import { exntensions, gpts, wordpressPlugins } from '../../shared/data';
 import { monthDiff } from './utils';
 
 export const photos = [
@@ -14,25 +14,36 @@ export const statistics = [
 		title: 'Years of experience',
 		value: yearsOfExperience,
 		postfix: '+',
+		slug: '',
 	},
 	{
 		title: 'Projects',
 		value: 100,
 		postfix: '+',
+		slug: '',
 	},
 	{
 		title: 'Browser Extensions',
 		value: exntensions.length,
 		postfix: '',
+		slug: 'browser-extensions',
 	},
 	{
 		title: 'WordPress Plugins',
-		value: 3,
+		value: wordpressPlugins.length,
 		postfix: '',
+		slug: 'wordpress-plugins',
+	},
+	{
+		title: 'GPTs',
+		value: gpts.length,
+		postfix: '',
+		slug: 'gpts',
 	},
 	{
 		title: 'Users',
 		value: 50,
 		postfix: 'M+',
+		slug: '',
 	},
 ];
