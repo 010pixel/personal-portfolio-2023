@@ -2,6 +2,7 @@ import React from 'react';
 import { Avatar, Box, CardHeader, CardMedia, IconButton, Tooltip, Typography } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import PlaceIcon from '@mui/icons-material/Place';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import TypeWhenInView from '../TypeWhenInView/TypeWhenInView';
@@ -182,6 +183,22 @@ const Banner: ReactFCC<BannerProps> = () => {
 									alt="Ggogle Developer"
 									src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/stackoverflow/stackoverflow-original.svg"
 								/>
+							</Tooltip>
+						</IconButton>
+					</a>
+					<a href="https://www.google.com/maps/contrib/105759984436678631984" target="_blank" rel="noopener noreferrer">
+						<IconButton
+							aria-label="Google Local Guide"
+							sx={{
+								color: 'red',
+								border: '1px solid transparent',
+								'&:hover': {
+									border: '1px solid',
+								},
+							}}
+						>
+							<Tooltip title="Google Local Guide" arrow>
+								<PlaceIcon />
 							</Tooltip>
 						</IconButton>
 					</a>
